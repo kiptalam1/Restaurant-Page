@@ -1,3 +1,23 @@
+import barbecueImage from "./Assets/barbecueImage.jpg";
+
+//https://www.federalistpig.com/menus/
+// continue from here ^ 
+// add more dishes to the menu.
+
+function loadBarbecue () {
+    const barbecueDiv = document.createElement('div');
+    barbecueDiv.className = 'barbecue-div';
+    const barbecueTitle = document.createElement('h1');
+    barbecueTitle.textContent = "BARBEQUE";
+    const barbecueText = document.createElement('p');
+    barbecueText.textContent = "Smoked daily, all served with Texas toast & pickles. Sold by the 1/2 lb.";
+    const barbecuePhoto = document.createElement('img');
+    barbecuePhoto.src = barbecueImage;
+
+    barbecueDiv.append(barbecueTitle, barbecueText, barbecuePhoto);
+    return barbecueDiv;
+}
+
 export function loadMenu() {
     const contentDiv = document.getElementById('content');
     // div for title, quote and order button
@@ -18,7 +38,10 @@ export function loadMenu() {
     orderButton.textContent = 'ORDER NOW';
 
     menuDiv.append(menuTitle, menuQuote, orderButton);
-    contentDiv.append(menuDiv);
-    
+
+    const barbecueDiv = loadBarbecue();
+    contentDiv.append(menuDiv, barbecueDiv);
+
     return contentDiv;
 }
+

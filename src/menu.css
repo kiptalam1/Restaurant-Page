@@ -7,6 +7,8 @@
     color: rgb(255, 255, 255);
     align-items: center;
     align-content: center;
+    margin-top: 150px;
+
 }
 
 .menu-div {
@@ -18,8 +20,8 @@
     text-align: center;
 }
 .menu-title {
-    margin: 30px auto;
-    font-size: 2rem;
+    margin: 20px auto;
+    font-size: 2.5rem;
     color: black;
 }
 
@@ -48,4 +50,35 @@
 .order-btn:hover {
     background-color: black;
     color: var(--body-color);
+}
+
+.barbecue-div {
+    width: 70%;
+
+}
+.barbecue-div h1 {
+    font-size: 2rem;
+    color: var(--body-color);
+    text-shadow: 
+        -2px -2px 0 black, /* Top-left shadow */
+        2px -2px 0 black,  /* Top-right shadow */
+        -2px 2px 0 black,  /* Bottom-left shadow */
+        2px 2px 0 black;
+    margin: 10px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.barbecue-div p {
+    font-size: 1rem;
+    color: black;
+    margin: 10px 0;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.barbecue-div img {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
 }
