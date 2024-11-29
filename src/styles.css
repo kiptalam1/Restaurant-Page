@@ -6,27 +6,51 @@
     font-size: 16px;
 }
 :root {
-
+    --body-color: rgb(237, 204, 20);
 }
 body {
-    background-color: rgb(237, 204, 20);
+    background-color: var(--body-color);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 header {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 150px;
     width: 100%;
     margin:auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 20px;
+    padding: 5px;
 }
 nav {
     display: flex;
     align-content: space-between;
-    gap: 20px;
+    gap: 30px;
 }
+.nav-button {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 2px 5px;
+    border: none;
+    background-color: var(--body-color);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background-color: black;
+    color: var(--body-color);
+}
+
 #content {
     display: flex;
     flex-direction: column;
