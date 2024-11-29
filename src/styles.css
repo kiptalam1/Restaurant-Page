@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+
 }
 :root {
     --body-color: rgb(237, 204, 20);
@@ -15,29 +16,36 @@ body {
     align-items: center;
 }
 header {
+    background-color: var(--body-color);
     display: flex;
     flex-direction: column;
     gap: 5px;
     align-items: center;
     justify-content: center;
-    height: 150px;
+    /* height: 120px; */
     width: 100%;
     margin:auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 header h1 {
     font-size: 2rem;
-    margin: 20px;
+    margin: 20px auto 5px auto;
     padding: 5px;
 }
 nav {
     display: flex;
     align-content: space-between;
     gap: 30px;
+    margin: 5px auto 10px auto;
 }
 .nav-button {
     font-size: 0.9rem;
     font-weight: bold;
+    margin: 10px;
     padding: 2px 5px;
     border: none;
     background-color: var(--body-color);
