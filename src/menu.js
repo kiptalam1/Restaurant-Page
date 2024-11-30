@@ -1,5 +1,20 @@
 import barbecueImage from "./Assets/barbecueImage.jpg";
 import sandwichImage from "./Assets/sandwich.jpg";
+import chickenImage from "./Assets/chicken.jpg";
+
+// Create chicken dish for the menus 
+function loadChicken () {
+    const chickenDiv = document.createElement('div');
+    chickenDiv.className = "chicken-div";
+    const chickenTitle = document.createElement('h1');
+    chickenTitle.textContent = "CHICKEN";
+    const chickenText = document.createElement('p');
+    chickenText.textContent = "1/4 chicken & 2 small sides";
+    const chickenPhoto = document.createElement('img');
+    chickenPhoto.src = chickenImage;
+    chickenDiv.append(chickenTitle, chickenText, chickenPhoto);
+    return chickenDiv;
+}
 
 // Create a sandwich dish for the menus
 function loadSandwich () {
@@ -35,7 +50,8 @@ function menusContainerDiv() {
     // add the different menus to the container
     const barbecueDiv = loadBarbecue();
     const sandwichDiv = loadSandwich();
-    menuCont.append(barbecueDiv, sandwichDiv);
+    const chickenDiv = loadChicken();
+    menuCont.append(barbecueDiv, sandwichDiv, chickenDiv);
     return menuCont;
 }
 

@@ -54,18 +54,23 @@
 
 .menu-cont {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    gap: 10px;
+    
 }
 
-.barbecue-div, .sandwich-div {
-    width: 70%;
+.barbecue-div, .sandwich-div, .chicken-div {
+    flex: 1 1 calc(50% - 10px);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    margin: 20px 0;
 }
-.barbecue-div h1, .sandwich-div h1 {
+.barbecue-div h1, .sandwich-div h1, .chicken-div h1 {
     font-size: 2rem;
     color: var(--body-color);
     text-shadow: 
@@ -78,7 +83,7 @@
     letter-spacing: 2px;
 }
 
-.barbecue-div p, .sandwich-div p {
+.barbecue-div p, .sandwich-div p, .chicken-div p {
     font-size: 1rem;
     color: black;
     margin: 10px 0;
@@ -86,7 +91,7 @@
     font-weight: bold;
 }
 
-.barbecue-div img, .sandwich-div img {
+.barbecue-div img, .sandwich-div img, .chicken-div img{
     width: 500px;
     height: 350px;
     object-fit: cover;
