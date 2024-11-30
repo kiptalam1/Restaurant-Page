@@ -96,6 +96,7 @@ function orderMenuDiv() {
 // Main function that loads the menus page
 export function loadMenu() {
     const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = "";
     const menuDiv = orderMenuDiv() 
     const menusHolder = menusContainerDiv();
     contentDiv.append(menuDiv, menusHolder);

@@ -8,6 +8,7 @@ export function pageLoad() {
     homeImage.classList.add('hero-image');
     
     const content = document.getElementById('content');
+    content.innerHTML = "";
     // create a div to add text on hero image
     const imageText = document.createElement('div');
     imageText.innerText = "Savor the Flavors of Italy in Every Bite";

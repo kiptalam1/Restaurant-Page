@@ -10,19 +10,15 @@ const menuButton = document.querySelector('.menu-btn');
 const aboutButton = document.querySelector('.about-btn');
 
 pageLoad();
-const content = document.getElementById('content');
 
 homeButton.addEventListener('click', () => {
-    content.textContent = "";
     pageLoad();
 });
 
 menuButton.addEventListener('click', () => {
-    content.textContent = "";
     loadMenu();
 });
 
 aboutButton.addEventListener('click', () => {
-    content.textContent = "";
     loadAbout();
 })
