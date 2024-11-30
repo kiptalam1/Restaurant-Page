@@ -3,6 +3,7 @@ import barbecueImage from "./Assets/barbecueImage.jpg";
 //https://www.federalistpig.com/menus/
 // continue from here ^ 
 // add more dishes to the menu.
+// npx webpack serve
 
 function loadBarbecue () {
     const barbecueDiv = document.createElement('div');
@@ -17,9 +18,18 @@ function loadBarbecue () {
     barbecueDiv.append(barbecueTitle, barbecueText, barbecuePhoto);
     return barbecueDiv;
 }
+// Create a div that holds all the menus to be added
+function menusContainerDiv() {
+    const menuCont = document.createElement('div');
+    menuCont.className = 'menu-cont';
+    // add the different menus to the container
+    const barbecueDiv = loadBarbecue();
+    menuCont.append(barbecueDiv);
+    return menuCont;
+}
 
-export function loadMenu() {
-    const contentDiv = document.getElementById('content');
+// Create a function to hold the call to action and message
+function orderMenuDiv() {
     // div for title, quote and order button
     const menuDiv = document.createElement('div');
     menuDiv.className = 'menu-div';
@@ -38,10 +48,15 @@ export function loadMenu() {
     orderButton.textContent = 'ORDER NOW';
 
     menuDiv.append(menuTitle, menuQuote, orderButton);
+    return menuDiv;
+}
 
-    const barbecueDiv = loadBarbecue();
-    contentDiv.append(menuDiv, barbecueDiv);
-
+// Main function that loads the menus page
+export function loadMenu() {
+    const contentDiv = document.getElementById('content');
+    const menuDiv = orderMenuDiv() 
+    const menusHolder = menusContainerDiv();
+    contentDiv.append(menuDiv, menusHolder);
     return contentDiv;
 }
 
