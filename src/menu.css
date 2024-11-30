@@ -20,7 +20,7 @@
     text-align: center;
 }
 .menu-title {
-    margin: 20px auto;
+    margin: 10px auto;
     font-size: 2.5rem;
     color: black;
 }
@@ -30,7 +30,7 @@
     font-size: .9rem;
     font-weight: 600;
     display: block;
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     line-height: 1.5;
     
@@ -40,7 +40,7 @@
     background-color: var(--body-color);
     text-align: center;
     padding: 10px 20px;
-    margin: 20px auto;
+    margin: 10px auto;
     font-size: .8rem;
     font-weight: 900;
     cursor: pointer;
@@ -56,12 +56,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 80%;
-    gap: 10px;
+    width: 75%;
+    gap: 0 5px;
     
 }
 
-.barbecue-div, .sandwich-div, .chicken-div {
+.barbecue-div, .sandwich-div, .chicken-div, .dessert-div {
     flex: 1 1 calc(50% - 10px);
     text-align: center;
     display: flex;
@@ -70,7 +70,7 @@
     justify-content: flex-end;
     margin: 20px 0;
 }
-.barbecue-div h1, .sandwich-div h1, .chicken-div h1 {
+.barbecue-div h1, .sandwich-div h1, .chicken-div h1, .dessert-div h1 {
     font-size: 2rem;
     color: var(--body-color);
     text-shadow: 
@@ -83,15 +83,15 @@
     letter-spacing: 2px;
 }
 
-.barbecue-div p, .sandwich-div p, .chicken-div p {
+.barbecue-div p, .sandwich-div p, .chicken-div p, .dessert-div p {
     font-size: 1rem;
     color: black;
     margin: 10px 0;
     padding: 5px 0;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-.barbecue-div img, .sandwich-div img, .chicken-div img{
+.barbecue-div img, .sandwich-div img, .chicken-div img, .dessert-div img{
     width: 500px;
     height: 350px;
     object-fit: cover;

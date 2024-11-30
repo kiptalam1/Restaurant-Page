@@ -1,6 +1,21 @@
 import barbecueImage from "./Assets/barbecueImage.jpg";
 import sandwichImage from "./Assets/sandwich.jpg";
 import chickenImage from "./Assets/chicken.jpg";
+import dessertImage from "./Assets/dessert.jpg";
+
+// Create dessert dish for the menus
+function loadDessert () {
+    const dessertDiv = document.createElement('div');
+    dessertDiv.className = "dessert-div";
+    const dessertTitle = document.createElement('h1');
+    dessertTitle.textContent = "DESSERT";
+    const dessertText = document.createElement('p');
+    dessertText.textContent = "The kind of blue-ribbon treats usually reserved for a State Fair judge, straight to you.";
+    const dessertPhoto = document.createElement('img');
+    dessertPhoto.src = dessertImage;
+    dessertDiv.append(dessertTitle, dessertText, dessertPhoto);
+    return dessertDiv;
+}
 
 // Create chicken dish for the menus 
 function loadChicken () {
@@ -51,7 +66,8 @@ function menusContainerDiv() {
     const barbecueDiv = loadBarbecue();
     const sandwichDiv = loadSandwich();
     const chickenDiv = loadChicken();
-    menuCont.append(barbecueDiv, sandwichDiv, chickenDiv);
+    const dessertDiv = loadDessert();
+    menuCont.append(barbecueDiv, sandwichDiv, chickenDiv, dessertDiv);
     return menuCont;
 }
 
