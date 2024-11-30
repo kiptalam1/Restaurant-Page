@@ -4,6 +4,8 @@ import { loadAbout } from "./about.js";
 import "./styles.css";
 import "./menu.css";
 import "./about.css";
+import "./footer.css";
+import { loadFooter } from "./footer.js";
 
 const homeButton = document.querySelector('.home-btn');
 const menuButton = document.querySelector('.menu-btn');
@@ -22,3 +24,5 @@ menuButton.addEventListener('click', () => {
 aboutButton.addEventListener('click', () => {
     loadAbout();
 })
+
+loadFooter();
