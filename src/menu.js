@@ -1,10 +1,21 @@
 import barbecueImage from "./Assets/barbecueImage.jpg";
+import sandwichImage from "./Assets/sandwich.jpg";
 
-//https://www.federalistpig.com/menus/
-// continue from here ^ 
-// add more dishes to the menu.
-// npx webpack serve
+// Create a sandwich dish for the menus
+function loadSandwich () {
+    const sandwichDiv = document.createElement('div');
+    sandwichDiv.className = 'sandwich-div';
+    const sandwichTitle = document.createElement('h1');
+    sandwichTitle.textContent = "SIGNATURE SANDWICHES";
+    const sandwichText = document.createElement('p');
+    sandwichText.textContent = "When bread meets what could go between bread, there’s no end to the possibilities."
+    const sandwichPhoto = document.createElement('img');
+    sandwichPhoto.src = sandwichImage;
+    sandwichDiv.append(sandwichTitle, sandwichText, sandwichPhoto);
+    return sandwichDiv;    
+}
 
+//Create a barbecue dish for the menus
 function loadBarbecue () {
     const barbecueDiv = document.createElement('div');
     barbecueDiv.className = 'barbecue-div';
@@ -14,7 +25,6 @@ function loadBarbecue () {
     barbecueText.textContent = "Smoked daily, all served with Texas toast & pickles. Sold by the 1/2 lb.";
     const barbecuePhoto = document.createElement('img');
     barbecuePhoto.src = barbecueImage;
-
     barbecueDiv.append(barbecueTitle, barbecueText, barbecuePhoto);
     return barbecueDiv;
 }
@@ -24,7 +34,8 @@ function menusContainerDiv() {
     menuCont.className = 'menu-cont';
     // add the different menus to the container
     const barbecueDiv = loadBarbecue();
-    menuCont.append(barbecueDiv);
+    const sandwichDiv = loadSandwich();
+    menuCont.append(barbecueDiv, sandwichDiv);
     return menuCont;
 }
 
@@ -33,14 +44,13 @@ function orderMenuDiv() {
     // div for title, quote and order button
     const menuDiv = document.createElement('div');
     menuDiv.className = 'menu-div';
-
+    // call to action header and text
     const menuTitle = document.createElement('h1');
     menuTitle.classList.add('menu-title');
     menuTitle.textContent = "MENUS";
     const menuQuote = document.createElement('p');
     menuQuote.className = 'menu-quote';
     menuQuote.textContent = "Embark on a savory journey through the timeless art of cuisine. Thousands of years ago, humanity discovered the magic of flame meeting flavor. While it hasn’t solved the mysteries of the universe, it has created one undeniable truth: a great meal can make the world feel just a little more harmonious.";
-    
     // add order now button
     const orderButton = document.createElement('button');
     orderButton.classList.add('order-btn');
