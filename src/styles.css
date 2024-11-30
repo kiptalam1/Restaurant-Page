@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: "Poppins", "Lato", "Merriweather", Georgia, Arial, sans-serif;
     font-size: 16px;
-    /* outline: 1px solid green; */
 
 }
 :root {
@@ -23,7 +22,6 @@ header {
     gap: 5px;
     align-items: center;
     justify-content: center;
-    /* height: 120px; */
     width: 100%;
     position: fixed;
     top: 0;
@@ -106,7 +104,6 @@ nav {
 }
 
 .burger-div, .special-div {
-    /* border: 1px solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,6 +115,11 @@ nav {
 .burger, .special {
     width: 500px;
     height: 350px;
+    transition: all 0.1s ease;
+}
+
+.burger:hover, .special:hover {
+    transform: translateY(-2px);
 }
 
 .burger-title, .special-title {

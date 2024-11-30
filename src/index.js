@@ -11,6 +11,7 @@ const homeButton = document.querySelector('.home-btn');
 const menuButton = document.querySelector('.menu-btn');
 const aboutButton = document.querySelector('.about-btn');
 
+// Default page.
 pageLoad();
 
 homeButton.addEventListener('click', () => {

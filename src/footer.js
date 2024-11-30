@@ -11,7 +11,7 @@ export function loadFooter() {
     contactInfo.classList.add('contact-info');
 
     const email = document.createElement('p');
-    email.textContent = "Email: contact@theadamskitchen.com";
+    email.textContent = "Email: fakecontact@theadamskitchen.com";
 
     contactInfo.append(email);
 
